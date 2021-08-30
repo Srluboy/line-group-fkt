@@ -1,4 +1,5 @@
 <?php
+if(isset($_POST['msg'])){
 function sendToLine($message){
         
 
@@ -24,7 +25,7 @@ function sendToLine($message){
 
         curl_close ($ch);
 }
-
-sendToLine('ข้อความของคุณ');
-
+$msg = $_POST['msg'];
+sendToLine($msg);
+}
 ?>
